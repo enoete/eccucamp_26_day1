@@ -268,6 +268,21 @@ body{font-family:var(--font-body);background:var(--navy);color:var(--cream)}
 .session-name{font-family:var(--font-display);font-size:clamp(36px,5vw,64px);color:var(--white);text-align:center;line-height:1.1}
 .session-time{font-family:var(--font-mono);font-size:13px;color:var(--gray)}
 
+
+/* ── ALERT SYSTEM ── */
+.alert-card{display:flex;align-items:flex-start;gap:20px;padding:24px 28px;border-radius:12px;max-width:760px;width:100%;margin:10px 0}
+.alert-card.red{background:rgba(231,76,60,0.12);border:2px solid #E74C3C}
+.alert-card.gold{background:rgba(240,165,0,0.1);border:2px solid var(--gold)}
+.alert-card.pin{background:rgba(0,201,177,0.08);border:2px solid var(--teal)}
+.alert-icon{font-size:32px;flex-shrink:0;line-height:1}
+.alert-body{}
+.alert-label{font-family:var(--font-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;font-weight:700}
+.alert-card.red .alert-label{color:#E74C3C}
+.alert-card.gold .alert-label{color:var(--gold)}
+.alert-card.pin .alert-label{color:var(--teal)}
+.alert-text{font-size:15px;line-height:1.6;color:var(--cream)}
+.alert-text strong{color:var(--white)}
+.alert-stack{display:flex;flex-direction:column;gap:10px;max-width:760px;width:100%}
 </style>
 </head>
 <body>
@@ -285,7 +300,22 @@ body{font-family:var(--font-body);background:var(--navy);color:var(--cream)}
       <div style="font-family:var(--font-mono);font-size:10px;color:var(--gray);letter-spacing:2px">LOADING DAY 1</div>
     </div>
   </div>
-  <style>@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}</style>
+  <style>@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+/* ── ALERT SYSTEM ── */
+.alert-card{display:flex;align-items:flex-start;gap:20px;padding:24px 28px;border-radius:12px;max-width:760px;width:100%;margin:10px 0}
+.alert-card.red{background:rgba(231,76,60,0.12);border:2px solid #E74C3C}
+.alert-card.gold{background:rgba(240,165,0,0.1);border:2px solid var(--gold)}
+.alert-card.pin{background:rgba(0,201,177,0.08);border:2px solid var(--teal)}
+.alert-icon{font-size:32px;flex-shrink:0;line-height:1}
+.alert-body{}
+.alert-label{font-family:var(--font-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;font-weight:700}
+.alert-card.red .alert-label{color:#E74C3C}
+.alert-card.gold .alert-label{color:var(--gold)}
+.alert-card.pin .alert-label{color:var(--teal)}
+.alert-text{font-size:15px;line-height:1.6;color:var(--cream)}
+.alert-text strong{color:var(--white)}
+.alert-stack{display:flex;flex-direction:column;gap:10px;max-width:760px;width:100%}
+</style>
 </div>
 
 <!-- ░░ S02 — REEL PLACEHOLDER ░░ -->
@@ -465,6 +495,7 @@ body{font-family:var(--font-body);background:var(--navy);color:var(--cream)}
     </div>
   </div>
   <div style="margin-top:24px;font-family:var(--font-display);font-size:20px;color:var(--gold)">If you had 15 seconds — what single moment would you show?</div>
+  <div class="alert-card gold" style="margin-top:20px"><div class="alert-icon">⭐</div><div class="alert-body"><div class="alert-label">Gold Star</div><div class="alert-text"><strong>A long-form film and a short-form reel are not the same story told at different speeds.</strong> They are fundamentally different creative challenges. Remember this every time you sit down to plan a video.</div></div></div>
 </div>
 
 <!-- ░░ S11 — YOUR TURN (BRIEF) ░░ -->
@@ -480,6 +511,10 @@ body{font-family:var(--font-body);background:var(--navy);color:var(--cream)}
       <li>Three words: how should the long-form film make someone feel?</li>
       <li>Three words: how should the reel make someone feel? Same or different?</li>
     </ul>
+  </div>
+  <div class="alert-stack" style="margin-top:16px">
+    <div class="alert-card red"><div class="alert-icon">🔴</div><div class="alert-body"><div class="alert-label">Red Alert</div><div class="alert-text"><strong>Paper only. No laptops.</strong> If you open a screen right now you will miss the most important thinking of the day.</div></div></div>
+    <div class="alert-card gold"><div class="alert-icon">⭐</div><div class="alert-body"><div class="alert-label">Gold Star</div><div class="alert-text"><strong>The real ask is always beneath the stated ask.</strong> Every client in the world says "make us a video." Your job is to find out what they actually need.</div></div></div>
   </div>
 </div>
 
@@ -599,7 +634,7 @@ body{font-family:var(--font-body);background:var(--navy);color:var(--cream)}
     <div style="font-size:16px;color:rgba(255,255,255,0.7);padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.1)">✗ &nbsp; A finished design</div>
     <div style="font-size:16px;color:rgba(255,255,255,0.7);padding:12px 0">✗ &nbsp; Something you make after deciding what the film looks like</div>
   </div>
-  <div style="margin-top:28px;font-size:14px;color:rgba(255,255,255,0.5);font-style:italic;max-width:580px">If you could replace any image with any other image and it wouldn't matter — that image doesn't belong.</div>
+  <div class="alert-card gold" style="margin-top:24px;border-color:rgba(240,165,0,0.4)"><div class="alert-icon">⭐</div><div class="alert-body"><div class="alert-label">Gold Star</div><div class="alert-text"><strong>A moodboard is a visual argument for a creative direction — not a collection of pretty pictures.</strong> If you can replace any image without it mattering, that image doesn't belong.</div></div></div>
 </div>
 
 <!-- ░░ S18 — WATCH ME BUILD ░░ -->
@@ -706,6 +741,7 @@ body{font-family:var(--font-body);background:var(--navy);color:var(--cream)}
       <li style="color:rgba(255,255,255,0.85)">If it could apply to ANY client — rewrite it</li>
     </ul>
   </div>
+  <div class="alert-card red" style="margin-top:16px;background:rgba(231,76,60,0.15);border-color:#E74C3C"><div class="alert-icon">🔴</div><div class="alert-body"><div class="alert-label">Red Alert</div><div class="alert-text"><strong>Vague is the enemy.</strong> "A film that makes people feel good about our brand" could apply to anyone. If your sentence has no specificity — rewrite it before this session ends.</div></div></div>
 </div>
 
 <!-- ░░ SESSION DIVIDER — S6 ░░ -->
@@ -746,19 +782,20 @@ body{font-family:var(--font-body);background:var(--navy);color:var(--cream)}
     <div style="padding:12px 16px;border-left:2px solid var(--teal);background:rgba(0,201,177,0.05);font-size:13px;color:var(--light)">Is there anything here that's just pretty — but doesn't earn its place?</div>
     <div style="padding:12px 16px;border-left:2px solid var(--gold);background:rgba(240,165,0,0.05);font-size:13px;color:var(--light)">What's the ONE image that captures the whole film in a single frame?</div>
   </div>
+  <div class="alert-card pin" style="margin-top:16px"><div class="alert-icon">📌</div><div class="alert-body"><div class="alert-label">Pin It</div><div class="alert-text">Is there anything on your moodboard that only the client can confirm? <strong>Add it to your Day 3 question list right now.</strong></div></div></div>
 </div>
 
 <!-- ░░ S26 — QUALITY CHECK ░░ -->
 <div class="slide bg-teal" data-session="Session 6">
   <div class="eyebrow" style="color:var(--navy2)">Before You Present</div>
-  <div class="task-card" style="background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.3)">
-    <h2 style="color:var(--navy)">Quality Check</h2>
-    <div class="timer" style="color:rgba(0,0,0,0.4)">⏱ 5 MINUTES · SELF-REVIEW</div>
+  <div class="task-card" style="background:rgba(6,14,28,0.7);border-color:rgba(255,255,255,0.2)">
+    <h2 style="color:var(--white)">Quality Check</h2>
+    <div class="timer" style="color:rgba(255,255,255,0.5)">⏱ 5 MINUTES · SELF-REVIEW</div>
     <ul>
-      <li style="color:var(--navy2)">Does the colour palette feel like your client's world?</li>
-      <li style="color:var(--navy2)">Is the reel moment obvious — and different from the long-form feeling?</li>
-      <li style="color:var(--navy2)">Are your creative direction sentences still true — or has the board taken you somewhere different?</li>
-      <li style="color:var(--navy2)">What would you change if you had 30 more minutes?</li>
+      <li style="color:var(--cream)">Does the colour palette feel like your client's world?</li>
+      <li style="color:var(--cream)">Is the reel moment obvious — and different from the long-form feeling?</li>
+      <li style="color:var(--cream)">Are your creative direction sentences still true — or has the board taken you somewhere different?</li>
+      <li style="color:var(--cream)">What would you change if you had 30 more minutes?</li>
     </ul>
   </div>
 </div>
@@ -799,6 +836,7 @@ body{font-family:var(--font-body);background:var(--navy);color:var(--cream)}
       <div class="r-q">What is the one question about your client that only they can answer — and is it on your Day 3 list?</div>
     </div>
   </div>
+  <div class="alert-card pin" style="margin-top:20px"><div class="alert-icon">📌</div><div class="alert-body"><div class="alert-label">Pin It</div><div class="alert-text">Open your Day 3 question list right now. <strong>Add the questions your moodboard raises that only the client can answer.</strong> You meet them in two days.</div></div></div>
 </div>
 
 <!-- ░░ SESSION DIVIDER — S8 ░░ -->
@@ -932,6 +970,21 @@ body{font-family:var(--font-body);background:var(--navy);color:var(--cream)}
 .nav-slide-btn.current-slide{border-color:var(--teal);background:rgba(0,201,177,0.1)}
 .nav-slide-num{font-family:var(--font-display);font-size:20px;line-height:1;margin-bottom:4px}
 .nav-slide-label{font-size:11px;color:var(--light);line-height:1.4}
+
+/* ── ALERT SYSTEM ── */
+.alert-card{display:flex;align-items:flex-start;gap:20px;padding:24px 28px;border-radius:12px;max-width:760px;width:100%;margin:10px 0}
+.alert-card.red{background:rgba(231,76,60,0.12);border:2px solid #E74C3C}
+.alert-card.gold{background:rgba(240,165,0,0.1);border:2px solid var(--gold)}
+.alert-card.pin{background:rgba(0,201,177,0.08);border:2px solid var(--teal)}
+.alert-icon{font-size:32px;flex-shrink:0;line-height:1}
+.alert-body{}
+.alert-label{font-family:var(--font-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;font-weight:700}
+.alert-card.red .alert-label{color:#E74C3C}
+.alert-card.gold .alert-label{color:var(--gold)}
+.alert-card.pin .alert-label{color:var(--teal)}
+.alert-text{font-size:15px;line-height:1.6;color:var(--cream)}
+.alert-text strong{color:var(--white)}
+.alert-stack{display:flex;flex-direction:column;gap:10px;max-width:760px;width:100%}
 </style>
 
 <script>
